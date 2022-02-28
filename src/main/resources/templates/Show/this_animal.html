@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:background="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Конкретный Животный :)</title>
+</head>
+<body>
+<strong>Конкретный Животный :)</strong>
+<hr>
+<br>
+<form th:method="POST" th:action="@{/action/delete/{id}(id=${ThisAnimal.getId()})}" th:object="${ThisAnimal}">
+<table border = "1">
+    <tr style="background: gray">
+        <td>id</td>
+        <td>Kind</td>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    <tr>
+        <td th:text="${ThisAnimal.id}"></td>
+        <td th:text="${ThisAnimal.kind}"></td>
+        <td th:text="${ThisAnimal.name}"></td>
+        <td th:text="${ThisAnimal.age}"></td>
+        </tr>
+</table>
+    <br>
+    <input type="submit" value="DELETE" style="background: red"/>
+</form>
+<br>
+<hr>
+<br>
+<a href="/show"><strong>Возврат на страницу всей живности</strong></a>
+</body>
+</html>

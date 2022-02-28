@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml" xmlns:background="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Show all list animals</title>
+</head>
+<body>
+<strong> Список всех животных </strong>
+<hr>
+<br>
+<table border="1">
+    <tr style="background: gray">
+        <td>id</td>
+        <td>Kind</td>
+        <td>Name</td>
+        <td>Age</td>
+    </tr>
+    <tr th:each="animal:${AllAnimals}">
+        <td th:text="*{animal.id}"></td>
+        <td th:text="*{animal.kind}"></td>
+        <td th:text="*{animal.name}"></td>
+        <td th:text="*{animal.age}"></td>
+        <td><a th:href="@{/show/this_animal/{id}(id=${animal.getId()})}" th:text="${ThisAnimal}"></a></td>
+        </tr>
+</table>
+</body>
+</html>
