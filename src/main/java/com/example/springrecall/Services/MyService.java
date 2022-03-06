@@ -1,4 +1,4 @@
-package com.example.springrecall.Servis;
+package com.example.springrecall.Services;
 
 import com.example.springrecall.db.MyDb;
 import com.example.springrecall.models.Animal;

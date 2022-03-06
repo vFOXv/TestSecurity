@@ -23,5 +23,11 @@
         <td><a th:href="@{/show/this_animal/{id}(id=${animal.getId()})}" th:text="${ThisAnimal}"></a></td>
         </tr>
 </table>
+<br>
+<a th:href="@{/logout}">LOGOUT</a>
+<br>
+<a th:href="@{show/read_profile}">READ PROFILE</a>
+<br>
+<a th:href="@{show/only_for_admins}">Only For Admins</a>
 </body>
 </html>

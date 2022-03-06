@@ -1,14 +1,9 @@
 package com.example.springrecall.models;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.ToString;
-import org.springframework.boot.context.properties.ConstructorBinding;
-
 
 @Data
-
-
 @ToString
 public class Animal {
     Long id;
